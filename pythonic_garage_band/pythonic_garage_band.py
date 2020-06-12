@@ -86,6 +86,11 @@ class Band():
         })
 
     def play_solos(self):
+        """prints out solos of the musicians
+
+        Returns:
+            [string]: [prints solos from the band in order]
+        """
         arr = ''
         for i in self.members:
             if i:
@@ -93,6 +98,11 @@ class Band():
         return arr
 
     def to_list(self):
+        """retrieves previous band (needs patch)
+
+        Returns:
+            [string]: [Names of previous band members]
+        """
         arr = ''
         for i in self.members:
             if i:
