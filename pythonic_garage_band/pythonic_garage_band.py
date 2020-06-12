@@ -1,8 +1,11 @@
 class Musician:
 
     def __init__(self, get_instrument, play_solo):
-        """
-        This is a doc
+        """This class has the base attributes for a musician.
+
+        Args: 
+            get_instrument (str): [Enter an instrument] 
+            play_solo (str): [Enter there solo keyword]
         """
 
         self.get_instrument = get_instrument
@@ -19,9 +22,6 @@ class Musician:
 
 
 class Guitarist(Musician):
-    # def __init__(self, get_instrument, play_solo):
-    #     self.get_instrument = get_instrument
-    #     self.play_solo = play_solo
 
     def __repr__(self):
         return {
@@ -34,9 +34,6 @@ class Guitarist(Musician):
 
 
 class Drummer(Musician):
-    # def __init__(self, get_instrument, play_solo):
-    #     self.get_instrument = get_instrument
-    #     self.play_solo = play_solo
 
     def __repr__(self):
         return {
@@ -49,9 +46,6 @@ class Drummer(Musician):
 
 
 class Bassist(Musician):
-    # def __init__(self, get_instrument, play_solo):
-    #     self.get_instrument = get_instrument
-    #     self.play_solo = play_solo
 
     def __repr__(self):
         return {
@@ -68,11 +62,14 @@ bassist = Bassist('Bass', 'Thumping')
 drummer = Drummer('Drums', 'Chopping')
 
 
-class Band(Musician):
+class Band():
 
     def __init__(self, name, members):
-        """
-        This is a doc
+        """Create a band by entering its name and members
+
+        Args:
+            name ([str]): [This is the name of your band]
+            members ([obj]): [This is the members]
         """
 
         self.name = name
@@ -83,18 +80,25 @@ class Band(Musician):
 
     def __repr__(self):
 
-        return {
-            'name': self.name
-
-        }
+        return str({
+            'name': self.name,
+            'members': self.members
+        })
 
     def play_solos(self):
-        # for member in self.members:
-        return self.members.play_solo
+        arr = ''
+        for i in self.members:
+            if i:
+                arr += i.play_solo + '\n'
+        return arr
+
+    def to_list(self):
+        arr = ''
+        for i in self.members:
+            if i:
+                arr += i.get_instrument + '\n'
+        return arr
 
 
-python_band = Band('Python Maniacs', guitarist)
-
-print(python_band.name)
-print(python_band.members)
-# print(python_band.play_solos)
+python_band = Band('Python Maniacs', [bassist, guitarist])
+python_band_two = Band('rollers', [drummer, guitarist])

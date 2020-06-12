@@ -4,9 +4,9 @@
 ## Web Application
 ***This is a pythonic garage band game for fun***
 
-The web application consists of a python code
+This application contains code for creating musicians and bands.
 
-you need to run this in your terminal to play
+The web application consists of a python code
 
 ---
 
@@ -29,11 +29,11 @@ No updates
 Clone this repository to your local machine.
 
 ```
-$ git clone https://github.com/will-ing/madlib-cli.git
+$ git clone https://github.com/will-ing/pythonic_garage_band.git
 ```
-Once downloaded, activate your virtual environment and run by `python madlib-cli/madlib.py`
+Once downloaded, activate your virtual environment and run by `python pythonic_garage_band/pythonic_garage_band.py`
 ```
-cd madlib-cli/madlib.py
+cd pythonic_garage_band/pythonic_garage_band.py
 
 ```
 
@@ -47,7 +47,7 @@ Unit testing is included in the project using the pytest test framework. Tests h
 
 ## Data Flow 
 
-The file is read > values are identified > a list is created based on user inputs > it printed and shown to user.
+Crate Musicians > Create Band
 
 ---
 
